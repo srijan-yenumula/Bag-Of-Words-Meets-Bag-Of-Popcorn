@@ -1,0 +1,82 @@
+Data: https://www.kaggle.com/c/word2vec-nlp-tutorial/data 
+
+Problem Description:
+    Many organizations would like to know more about the opinions
+    of their customers and clients.  Customer review boards enable
+    consumers to share their opinions, which can then be used by
+    organizations to improve products and services.
+
+    Sentiment analysis, or SA, is a technique used to determine
+    whether a given document is positive or negative in nature.
+    Depending on how SA is implemented, it can even work on
+    unlabeled data (e.g. text reviews without star ratings).
+
+    This project applies sentiment analysis to movie reviews;
+    it classifies each review as being either positive or negative.
+    Some approaches to SA have an additional "neutral" category,
+    which we have chosen not to use.
+
+
+Explanation of Solution:
+    This project combines several models for classifying the
+    sentiment of documents.
+
+    For those interested in technical implementation details,
+    the models are listed below.
+
+    1. Bag of Words
+    2. Distributed Word Vectors
+    3. Paragraph Vectors
+    4. Naive-Bayes Support Vector Machine
+
+    The following section gives a high-level overview of the
+    solution, in a stepwise fashion.
+
+    Steps:
+        - Count all the words in each review
+        - Use the counts to build the "Bag of Words" model
+
+        - Associate related/similar words within reviews
+        - These associations are used to build dist. word vectors
+
+        - Associate each word with its respective review
+        - These associations are used to build paragraph vectors
+
+        - Find the difference between positive and negative reviews
+        - Create numeric representations of this difference
+        - These representations are used in the Support Vector Machine
+
+        - Take the weighted averages of models 1-4
+        - The final model is produced from the averages
+        - Use the complete model to predict movie review sentiment
+        - Store the results in a comma-separated values file
+
+Instructions:
+    A script that runs everything with default input and output is
+    available in the project folder. It is called "runit.sh", and
+    simplifies the usage of this program.
+
+    To run manually, type the following command into your preferred
+    terminal emulator (replace the items in angle brackets with the
+    desired file names):
+
+        python make_predictions.py <training_data> <test_data> <unlabeled_training_data> <output>
+
+    In order to reduce the time required to run this application,
+    pre-trained models can be used. To generate them manually,
+    use the following command (only needs to be done once):
+
+        python generate_models.py <training_data> <test_data> <unlabeled_training_data>
+
+    Refer to the text file named "INSTALL" for installation instructions.
+
+
+Team Member Roles:
+    Srijan Yenumula -
+        1) wrote svm_model.py, which creates the Support Vector Machine
+        2) created initial logic and implementation of make_predictions.py
+
+    Ravneet Singh -
+        1) wrote generate_models.py, which produces models 2 & 3
+        2) put together a set of utility functions in utilities.py
+        3) improved style and added documentation to make_predictions.py

@@ -1,0 +1,1 @@
+pip3 install nltk pandas scikit-learn Cython gensim BeautifulSoup

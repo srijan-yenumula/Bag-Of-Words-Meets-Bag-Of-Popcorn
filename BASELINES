@@ -1,0 +1,20 @@
+Bag of Words baseline:
+    - simple supervised approach
+    - runs quickly
+    - code available at https://www.kaggle.com/c/word2vec-nlp-tutorial#part-1-for-beginners-bag-of-words
+
+    84.444% AUC
+
+Support Vector Machine:
+    - longer runtime
+
+    89.01% AUC
+
+Combined approach:
+    Weighted average mean of:
+        - bag of words
+        - word2vec
+        - doc2vec
+        - SVM
+
+    97.162% AUC

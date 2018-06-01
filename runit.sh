@@ -1,0 +1,2 @@
+python generate_models.py data/labeledTrainData.tsv data/testData.tsv data/unlabeledTrainData.tsv
+python make_predictions.py data/labeledTrainData.tsv data/testData.tsv data/unlabeledTrainData.tsv weighted_average_model.csv

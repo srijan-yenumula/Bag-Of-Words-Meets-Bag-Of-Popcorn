@@ -1,0 +1,23 @@
+Dependencies:
+    The external Python packages this project depends on
+    are listed below.
+
+    nltk
+    numpy
+    scipy
+    pandas
+    scikit-learn
+    gensim
+    Cython
+    BeautifulSoup
+
+    To install, ensure pip is available. This can be determined
+    by running `which pip3`.  If there is no output, please run
+    `sudo apt install python3-pip`.
+
+    Once pip has been installed, all of the above packages can
+    be downloaded and installed at once using the command below:
+
+        pip3 install nltk pandas scikit-learn Cython gensim BeautifulSoup
+
+    An install script has been included for convenience.
