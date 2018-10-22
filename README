@@ -71,12 +71,3 @@ Instructions:
     Refer to the text file named "INSTALL" for installation instructions.
 
 
-Team Member Roles:
-    Srijan Yenumula -
-        1) wrote svm_model.py, which creates the Support Vector Machine
-        2) created initial logic and implementation of make_predictions.py
-
-    Ravneet Singh -
-        1) wrote generate_models.py, which produces models 2 & 3
-        2) put together a set of utility functions in utilities.py
-        3) improved style and added documentation to make_predictions.py
